@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html> 
+<head>
+    <meta charset = "utf-8"/>
+    <!--Importacion de CSS (stylesheet.css)-->
+    <link rel= "stylesheet"  type="text/css"  href="stylesheet.css"/>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title> Añadir PDF a MySQL</title>
+</head>
+<body>
+    <div id="content">
+            <!--Barra de Navegacion-->
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF8C00;height: 80px;">
+                <a class="navbar-brand" href="index.html"><img src="Ceti.png.webp" width="70" height="70" class="rounded bg-white" alt=" "></a>
+                
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:rgb(0, 105, 189);" href="#">Añadir</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <a href="under-construction.html" style="color:rgb(0, 105, 189);" class="nav-link">Sign in</a>
+                      </span>
+                
+            </nav>
+
+
+            <!--BreadCrumbs-->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Añadir</li>
+                </ol>
+            </nav>
+
+            <div class="input-group mb-3" style="width: 75%;">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02">
+                  <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                  <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                </div>
+              </div>
+            <!--
+        <?php
+            //datos del servidor
+            $dbh = new PDO("mysql:host=localhost;dbname=demo", "root", "");
+
+            //Conexion a la base de datos
+            if(isset($_POST['btn'])){
+                $name = $_FILES['myfile']['name'];
+                $type = $_FILES['myfile']['type'];
+                $data = file_get_contents($_FILES['myfile']['tmp_name']);
+                $stmt = $dbh->prepare("insert into myblob2 values ('',?,?,?)");
+                //stmt almacena los datos del archivo
+                $stmt -> bindParam(1, $name);
+                $stmt->bindParam(2,$type);
+                $stmt->bindParam(3,$data);
+                $stmt ->execute();
+            }
+
+        ?>
+    -->
+
+        <!--Formulario para subir archivos-->
+        
+        <p></p>
+
+        <!--Muestreo de datos-->
+        <ol>
+            <!--
+            <?php
+                //selecciona los archivos de la tabla myblob2
+                $stat = $dbh->prepare("select * from myblob2");
+                $stat->execute();
+
+                while($row = $stat->fetch()){
+                    echo "<li><a target='_blank' href = 'view.php?id=".$row['id']."'>".$row['name']."</a><br/>
+                    <embed src ='data:".$row['mime'].";base64,".base64_encode($row['data'])."' width ='200'/>
+                    </li>";
+                }
+            ?>
+            -->
+        </ol>
+    </div>
+</body>
+</html>
